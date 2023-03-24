@@ -43,7 +43,8 @@ public class Main {
         System.out.println("publicKeyHex: " + publicKeyHex);
 
 
-        RegistrationManager.sendRequest();
+        String result = RegistrationManager.sendRequest();
+        System.out.println(result);
 
 
 

@@ -70,7 +70,8 @@ public class register {
 
 
 
-    public void sendRequest() throws IOException {
+    public String sendRequest() throws IOException {
+        String result = "";
 
         // 要發送的JSON數據
         // 使用GSON建立JSON物件
@@ -146,8 +147,8 @@ public class register {
                 sb.append((char) cp);
             }
             String response = sb.toString();
-            System.out.println(response);
             System.out.println("response: "+ response);
+            response= result;
             br.close();
         }
 
@@ -159,7 +160,7 @@ public class register {
         // 關閉連接和讀寫器
 
         conn.disconnect();
-
+        return result;
 
     }
 }
